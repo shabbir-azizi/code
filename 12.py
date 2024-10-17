@@ -31,14 +31,14 @@
 
 
 
-movies =[]
-mov = input("enter frist movie")
-movies.append(mov)
-mov = input("enter second movie")
-movies.append(mov)
-mov = input("enter third movie")
+# movies =[]
+# mov = input("enter frist movie")
+# movies.append(mov)
+# mov = input("enter second movie")
+# movies.append(mov)
+# mov = input("enter third movie")
 
 
-movies.append(mov)
+# movies.append(mov)
 
-print(movies)
+# print(movies)
