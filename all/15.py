@@ -26,9 +26,9 @@
 # b = float(input("enter second :"))
 # print("avg =",(a+b)/2)
 
-b = int(input("enter second :"))
+# a = int(input("enter second :"))
 
-b = int(input("enter second :"))
+# b = int(input("enter second :"))
 
-print(a>=b)
+# print(a>=b)
 
