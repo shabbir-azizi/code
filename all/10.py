@@ -19,7 +19,7 @@
 #     if(age>=80):
 #         print("cannot drive")
 #     else:
-#          print("can drivr")
+#          print("can drive")
 
 # else:
 #     print("cannot drive")
