@@ -20,64 +20,6 @@
 # str="my name is shabbie my father name is abc"
 # print(str.count("my"))
 
-
-
-# # age=21
-# age=21
-# if(age >= 18):
-#     # print("can vot & aply for licanse")
-#     print("can drive")
-#     print("can vote")
-
-
-
-
-
-
-
-
-
-
-
-# a = 2 
-# b = 4.25
-# sum = a + b
-
-# print(sum)
-
-# a = int("2")
-
-# a = float("2")
-# b = 4.25
-# sum = a + b
-# print(type(a))
-# print(sum)
-
-# # a = 4.25
-# # a = str(a)/
-
-# # print(type(a))
-
-
-
-# # name = input("enter your name:")
-
-# # print("hi how are you ", name)
-
-# name = input("enter name")
-# age = int(input("enter age"))
-# marks = float(input("enter marks"))
-
-# print("welcome",name)
-# print("age =",age)
-# print("tnku bandal bandal=",marks)
-  
-
-
-
-
-
-
 def printboard():
     print(f"0 | 1 | 2 |")
     print(f"---|---|---|")
