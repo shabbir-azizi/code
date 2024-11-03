@@ -12,124 +12,59 @@ def task():
     while True:
         operation = int(input("enter 1-add\nd-update\n3-delete\n4-view\n5-exit/stop/"))
 
-        # if operation == 1:
+    
 
 
 
 
+# print("Hello, World!")
+# a = 10
+# b = 5
+# print("Addition:", a + b)
+# print("Subtraction:", a - b)
+# print("Multiplication:", a * b)
+# print("Division:", a / b)
+# name = input("Enter your name: ")
+# print("Hello, " + name)
+# num = int(input("Enter a number: "))
+# if num > 0:
+#     print("Positive")
+# elif num < 0:
+#     print("Negative")
+# else:
+#     print("Zero")
+# print(factorial(5))
+# class Person:
+#def __init__(self, name, age):
+#self.name = name
+#self.age = age
+#     def greet(self):
+#         return "Hello, " + self.name
+#         person1 = Person("Alice", 25)
+# print(person1.greet())
+# try:
+#     x = 10 / 0
+# except ZeroDivisionError:
+#     print("Cannot divide by zero")
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# person1 = Person("Alice", 25)
+# print(person1.greet())
+# def greet(name):
+#     return "Hello, " + name
+# def fibonacci(n):
+#     fib_seq = [0, 1]
+#     for i in range(2, n):
+#         fib_seq.append(fib_seq[i-1] + fib_seq[i-2])
+#     return fib_seq
+# print(factorial(5))
+# Writing to a file
+# with open("example.txt", "w") as file:
+#     file.write("Hello, this is a sample file.")
 
-
-        def check_winner():
-    for combo in[[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 3, 6],[1, 4, 7],[2, 5, 8],[0, 4, 8],[2, 4, 6]]:
-        if buttons[combo[o]]["text"]== buttons[combo[1]]["text"]==buttons(combo[2])["text"] !="":
-            buttons[combo[0]].config(bg ="green")
-            buttons[combo[1]].config(bg ="green")
-            buttons[combo[2]].config(bg ="green")
-            messagebox.showinfo ("Tic-Tac-Toe", f"player {buttons[combo[0]]['text']} wins!")
-            root.quit()
-
-
-def button_click(index):
-    if buttons[index]["text"] == "" and not winner:
-        buttons[index]["text"] = current_player
-        check_winner()
-        toggle_player()
-
-
-def toggle_player():
-    global current_player
-    current_player ="x" if current_player == "0" else "0"
-    label.config(text=f"player{current_player}'s turn")
-root = tk.Tk()
-root.title("Tic-Tac-Toe")
- 
-
-buttons = [tk.button(root,text ="",font=("normal", 25),width=6,height=2,command=lamda i=i: button_click(i))for i in range(9)]
-for i, button in enumerate(buttons):
-    button.grid(row=i //3, column=i % 3)
-current_player ="x"
-winner = False
-labal = tk.labal (root, trxt= f"player{current_player}'s turn, font",font=("normal", 16))
-labal.grid()
-
-
-
-
-import tkinter as tk
-from tkinter import messagebox
-
-def check_winner():
-    global winner
-    for combo in [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]:
-        if buttons[combo[0]]["text"] == buttons[combo[1]]["text"] == buttons[combo[2]]["text"] != "":
-            buttons[combo[0]].config(bg="green")
-            buttons[combo[1]].config(bg="green")
-            buttons[combo[2]].config(bg="green")
-            winner = True
-            messagebox.showinfo("Tic-Tac-Toe", f"Player {buttons[combo[0]]['text']} wins!")
-            root.quit()
-
-def button_click(index):
-    if buttons[index]["text"] == "" and not winner:
-        buttons[index]["text"] = current_player
-        check_winner()
-        toggle_player()
-
-def toggle_player():
-    global current_player
-    current_player = "x" if current_player == "0" else "0"
-    label.config(text=f"Player {current_player}'s turn")
-
-root = tk.Tk()
-root.title("Tic-Tac-Toe")
-
-buttons = [tk.Button(root, text="", font=("normal", 25), width=6, height=2, command=lambda i=i: button_click(i)) for i in range(9)]
-for i, button in enumerate(buttons):
-    button.grid(row=i // 3, column=i % 3)
-
-current_player = "x"
-winner = False
-label = tk.Label(root, text=f"Player {current_player}'s turn", font=("normal", 16))
-label.grid(row=3, column=0, columnspan=3)
-
-root.mainloop()
-
-
-import tkinter as tk
-from tkinter import messagebox
-
-def check_winner():
-    global winner
-    for combo in [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]:
-        if buttons[combo[0]]["text"] == buttons[combo[1]]["text"] == buttons[combo[2]]["text"] != "":
-            buttons[combo[0]].config(bg="green")
-            buttons[combo[1]].config(bg="green")
-            buttons[combo[2]].config(bg="green")
-            winner = True
-            messagebox.showinfo("Tic-Tac-Toe", f"Player {buttons[combo[0]]['text']} wins!")
-            root.quit()
-
-def button_click(index):
-    if buttons[index]["text"] == "" and not winner:
-        buttons[index]["text"] = current_player
-        check_winner()
-        toggle_player()
-
-def toggle_player():
-    global current_player
-    current_player = "x" if current_player == "0" else "0"
-    label.config(text=f"Player {current_player}'s turn")
-
-root = tk.Tk()
-root.title("Tic-Tac-Toe")
-
-buttons = [tk.Button(root, text="", font=("normal", 25), width=6, height=2, command=lambda i=i: button_click(i)) for i in range(9)]
-for i, button in enumerate(buttons):
-    button.grid(row=i // 3, column=i % 3)
-
-current_player = "x"
-winner = False
-label = tk.Label(root, text=f"Player {current_player}'s turn", font=("normal", 16))
-label.grid(row=3, column=0, columnspan=3)
-
-root.mainloop()
+# # Reading from a file
+# with open("example.txt", "r") as file:
+# content = file.read()
+#print(content)  # Output: Hello, this is a sample file.
