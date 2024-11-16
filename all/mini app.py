@@ -32,3 +32,76 @@ if another_order == "yes":
             print(f"orderd item {item_2} is not available yet!")
 
 print(f"the total amount of items to pay is {order_total}")
+
+
+
+
+
+"""
+
+syntax:
+
+var_name {key:value, key2:value2}
+
+"""
+
+
+
+
+
+
+#step1 intitialize a dict
+menu ={}#empty
+#step2 how to add element
+
+menu ["gulab jaman"] = 10
+#step3 how to remove a element
+del menu ["gulab jaman"]
+
+#step4 how to access key 
+menu["chicken rool"] = 240
+
+# step5 hoe to update
+menu["chicken rool"] = 300
+"""price = menu["chicken rool"]
+print(price)"""
+
+ 
+
+
+
+price = menu["palak paneer"]
+print(price)
+
+
+# step6 hoe to clear a dictionary
+
+# menu.clear()
+
+# how to fine a lenght of a dictinory
+
+print(menu)
+print(len(menu))
+
+
+name = "Alice"
+# Integer
+age = 25
+# Float
+height = 5.9
+# Boolean
+is_student = True
+
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is a student:", is_student)
+a = 10
+b = 3
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % b)
+print("Exponent:", a ** b)
+number = 7
