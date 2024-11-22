@@ -71,3 +71,43 @@ a=32
 b=43
 a+b
 print(a+b)
+
+
+# to day 20,11,2024
+
+
+# List manipulation example
+
+# Create a list
+numbers = [5, 2, 9, 1, 7, 6]
+
+# Print the original list
+print("Original List:", numbers)
+
+# Sort the list in ascending order
+numbers.sort()
+print("Sorted List (Ascending):", numbers)
+
+# Sort the list in descending order
+numbers.sort(reverse=True)
+print("Sorted List (Descending):", numbers)
+
+# Reverse the list
+numbers.reverse()
+print("Reversed List:", numbers)
+
+# Add an element to the list
+numbers.append(10)
+print("List after adding an element:", numbers)
+
+# Remove an element from the list
+numbers.remove(9)  # Removes the first occurrence of 9
+print("List after removing an element:", numbers)
+
+# Replace an element at a specific index
+numbers[2] = 15
+print("List after replacing an element:", numbers)
+
+# Slice the list
+sliced_list = numbers[1:4]  # Get elements from index 1 to 3
+print("Sliced List (index 1 to 3):", sliced_list)
