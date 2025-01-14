@@ -37,67 +37,47 @@ lab_min_txt = Label(clock, text="Min.", font=('times new roman', 20, "bold"),
                bg='red', fg="white")
 lab_min_txt.place(x=340, y=190, height=40, width=100)
 
-
 lab_sec = Label(clock, text="00", font=('times new roman', 60, "bold"),
                bg='red', fg="white")
 lab_sec.place(x=560, y=50, height=110, width=100)
-
-
 lab_sec_txt = Label(clock, text="Sec", font=('times new roman', 20, "bold"),
                bg='red', fg="white")
 lab_sec_txt.place(x=560, y=190, height=40, width=100)
-
-lab_am = Label(clock, text="00", font=('times new roman', 60, "bold"),
+lab_am = Label(clock, text="00", font=('times new roman', 50, "bold"),
                bg='red', fg="white")
 lab_am .place(x=780, y=50, height=110, width=100)
-
-
 lab_am_txt = Label(clock, text="Am/Pm", font=('times new roman', 20, "bold"),
                bg='red', fg="white")
 lab_am_txt.place(x=780, y=190, height=40, width=100)
 
 
-date_time()
-clock.mainloop()
+# ********  date
 
 
+lab_date = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='red', fg="white")
+lab_date.place(x=120, y=270, height=110, width=100)
+lab_date_txt = Label(clock, text="Date", font=('times new roman', 20, "bold"),
+               bg='red', fg="white")
+lab_date_txt.place(x=120, y=410, height=40, width=100)
+lab_mo = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='red', fg="white")
+lab_mo.place(x=340, y=270, height=110, width=100)
+lab_mo_txt = Label(clock, text="Month.", font=('times new roman', 20, "bold"),
+               bg='red', fg="white")
+lab_mo_txt.place(x=340, y=410, height=40, width=100)
+lab_year = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='red', fg="white")
+lab_year.place(x=560, y=270, height=110, width=100)
+lab_year_txt = Label(clock, text="Year", font=('times new roman', 20, "bold"),
+               bg='red', fg="white")
+lab_year_txt.place(x=560, y=410, height=40, width=100)
+lab_day = Label(clock, text="00", font=('times new roman', 50, "bold"),
+               bg='red', fg="white")
+lab_day.place(x=780, y=270, height=110, width=100)
+lab_day_txt = Label(clock, text="Day", font=('times new roman', 20, "bold"),
+               bg='red', fg="white")
+lab_day_txt.place(x=780, y=410, height=40, width=100)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import requests
-from bs4 import BeautifulSoup
-
-def scrape_titles(url):
-    # Send a GET request to the website
-    response = requests.get(url)
-
-    # Check if the request was successful
-    if response.status_code == 200:
-        # Parse the HTML content of the page
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        # Find all article titles (assuming they're in <h2> tags)
-        titles = soup.find_all('h2')
-
-        # Print each title
-        for title in titles:
-            print(title.get_text())
-    else:
-        print(f"Failed to retrieve the page. Status code: {response.status_code}")
-
-# URL of the website to scrape
-url = 'https://example.com/articles'
-scrape_titles(url)
+# date_time()
+# clock.mainloop()
