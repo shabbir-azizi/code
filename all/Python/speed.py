@@ -1,51 +1,208 @@
-# from logging import root
-# from pydoc import text
-# import tkinter as tk
-# root = tk.Tk()
-# label1 = tk.Label(text='welcome to ss coder guy')
-# label1.grid(row =0,column=0)
-# text
-# # relief
-# # height
-# # width
-# # bd
-# # bg
-# # fg
-# root.mainloop()
-import tkinter as tk
-window = tk.Tk()
-window.title("Typo Speed Practise")
-window.geometry("1150x950+500+25")
-window.resizable(True,True)
+
+from tkinter import *
+import datetime  # Importing the datetime module
+
+def date_time():
+    time = datetime.datetime.now()
+    hr = time.strftime('%I')
+    mi = time.strftime('%M')
+    sec = time.strftime('%S')  # Corrected variable name
+    am = time.strftime('%p')   # Corrected variable name and format for AM/PM
+    date = time.strftime('%d')  # Corrected format for day of the month
+    month = time.strftime('%m')
+    year = time.strftime('%Y')  # Corrected format for full year
+    day = time.strftime('%a')
+    
+    lab_hr.config(text=hr)
+    lab_min.config(text=mi)
+    lab_sec.config(text=sec)
+    lab_am.config(text=am)
+
+    lab_date.config(text=date)
+    lab_mo.config(text=month)
+    lab_year.config(text=year)
+    lab_day.config(text=day)
+
+    lab_hr.after(200, date_time)  # Moved outside of lab_hr.config
+
+clock = Tk()
+clock.title('**** Digital Clock ****')
+clock.geometry('1000x500')
+clock.config(bg='dark gray')
+
+lab_hr = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_hr.place(x=120, y=50, height=110, width=100)
+
+lab_hr_txt = Label(clock, text="Hour", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_hr_txt.place(x=120, y=190, height=40, width=100)
+
+lab_min = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_min.place(x=340, y=50, height=110, width=100)
+
+lab_min_txt = Label(clock, text="Min.", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_min_txt.place(x=340, y=190, height=40, width=100)
+
+lab_sec = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_sec.place(x=560, y=50, height=110, width=100)
+
+lab_sec_txt = Label(clock, text="Sec", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_sec_txt.place(x=560, y=190, height=40, width=100)
+
+lab_am = Label(clock, text="00", font=('times new roman', 50, "bold"),
+               bg='gray', fg="black")
+lab_am.place(x=780, y=50, height=110, width=100)
+
+lab_am_txt = Label(clock, text="Am/Pm", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_am_txt.place(x=780, y=190, height=40, width=100)
+
+# Date Labels
+lab_date = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_date.place(x=120, y=270, height=110, width=100)
+
+lab_date_txt = Label(clock, text="Date", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_date_txt.place(x=120, y=410, height=40, width=100)
+
+lab_mo = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_mo.place(x=340, y=270, height=110, width=100)
+
+lab_mo_txt = Label(clock, text="Month.", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_mo_txt.place(x=340, y=410, height=40, width=100)
+
+lab_year = Label(clock, text="00", font=('times new roman', 60, "bold"),
+               bg='gray', fg="black")
+lab_year.place(x=560, y=270, height=110, width=150)
+
+lab_year_txt = Label(clock, text="Year", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_year_txt.place(x=560, y=410, height=40, width=110)
+
+lab_day = Label(clock, text="00", font=('times new roman', 35, "bold"),
+               bg='gray', fg="black")
+lab_day.place(x=780, y=270, height=110, width=100)
+
+lab_day_txt = Label(clock, text="Day", font=('times new roman', 20, "bold"),
+               bg='gray', fg="black")
+lab_day_txt.place(x=780, y=410, height=40, width=100)
+
+date_time()
+clock.mainlo
 
 
-# Main Frame
-main_frame = tk.Frame(window,bg='white',bd=4)
 
 
-# Title Frame
-frame_title = tk.Frame(main_frame, bg='red', relief='flat')
-lbl_title = tk.Label(frame_title, text='speed', font='Algerian 35 bold', bg='gray', fg='black', relief='groove', bd=10, width=30)
-lbl_title.grid(row=0, column=0,pady=10)
-frame_title.grid(row=0,column=0)
+# from tkinter import *
+# import datetime  # Importing the datetime module
+
+# def date_time():
+#     time = datetime.datetime.now()
+#     hr = time.strftime('%I')
+#     mi = time.strftime('%M')
+#     sec = time.strftime('%S')  # Corrected variable name
+#     am = time.strftime('%p')   # Corrected variable name and format for AM/PM
+#     date = time.strftime('%d')  # Corrected format for day of the month
+#     month = time.strftime('%m')
+#     year = time.strftime('%Y')  # Corrected format for full year
+#     day = time.strftime('%a')
+    
+#     lab_hr.config(text=hr)
+#     lab_min.config(text=mi)
+#     lab_sec.config(text=sec)
+#     lab_am.config(text=am)
+
+#     lab_date.config(text=date)
+#     lab_mo.config(text=month)
+#     lab_year.config(text=year)
+#     lab_day.config(text=day)
+
+#     lab_hr.after(200, date_time)  # Moved outside of lab_hr.config
+
+# clock = Tk()
+# clock.title('**** Digital Clock ****')
+# clock.geometry('1000x500')
+# clock.config(bg='dark gray')
+
+# lab_hr = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_hr.place(x=120, y=50, height=110, width=100)
+
+# lab_hr_txt = Label(clock, text="Hour", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_hr_txt.place(x=120, y=190, height=40, width=100)
+
+# lab_min = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_min.place(x=340, y=50, height=110, width=100)
+
+# lab_min_txt = Label(clock, text="Min.", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_min_txt.place(x=340, y=190, height=40, width=100)
 
 
-# Test Frame
-selected_paragraph ='A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.'
-frame_test = tk.Frame(main_frame,bg='white',relife='flate')
-# paragraph
-lbl_paragraph = tk.Label(frame_test,text=selected_paragraph,wraplength=1000,justify='left')
-lbl_paragraph.Grid(row=0,column=0)
-# input box
+
+# lab_sec = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_sec.place(x=560, y=50, height=110, width=100)
+
+# lab_sec_txt = Label(clock, text="Sec", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_sec_txt.place(x=560, y=190, height=40, width=100)
+
+# lab_am = Label(clock, text="00", font=('times new roman', 50, "bold"),
+#                bg='gray', fg="black")
+# lab_am.place(x=780, y=50, height=110, width=100)
+
+# lab_am_txt = Label(clock, text="Am/Pm", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_am_txt.place(x=780, y=190, height=40, width=100)
+
+# # Date Labels
+# lab_date = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_date.place(x=120, y=270, height=110, width=100)
+
+# lab_date_txt = Label(clock, text="Date", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_date_txt.place(x=120, y=410, height=40, width=100)
+
+# lab_mo = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_mo.place(x=340, y=270, height=110, width=100)
+
+# lab_mo_txt = Label(clock, text="Month.", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_mo_txt.place(x=340, y=410, height=40, width=100)
+
+# lab_year = Label(clock, text="00", font=('times new roman', 60, "bold"),
+#                bg='gray', fg="black")
+# lab_year.place(x=560, y=270, height=110, width=150)
+
+# lab_year_txt = Label(clock, text="Year", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_year_txt.place(x=560, y=410, height=40, width=110)
+
+# lab_day = Label(clock, text="00", font=('times new roman', 35, "bold"),
+#                bg='gray', fg="black")
+# lab_day.place(x=780, y=270, height=110, width=100)
+
+# lab_day_txt = Label(clock, text="Day", font=('times new roman', 20, "bold"),
+#                bg='gray', fg="black")
+# lab_day_txt.place(x=780, y=410, height=40, width=100)
+
+# date_time()
+# clock.mainloop()
 
 
-frame_test.grid(row=0,column=0)
-
-
-# Output Frame
-# Keyboard Frame
-main_frame.grid() 
-window.mainloop()
 
 
 
@@ -56,92 +213,3 @@ window.mainloop()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-# 1. Hello, World!
-print("Hello, World!")
-
-# 2. Variables and Data Types
-x = 5  # Integer
-y = 3.14  # Float
-name = "Alice"  # String
-is_active = True  # Boolean
-print(x, y, name, is_active)
-
-# 3. Conditional Statements
-age = 18
-if age >= 18:
-    print("You are an adult.")
-else:
-    print("You are a minor.")
-
-# 4. Loops
-# For loop
-for i in range(5):
-    print("Iteration:", i)
-
-# While loop
-count = 0
-while count < 5:
-    print("Count:", count)
-    count += 1
-
-# 5. Functions
-def greet(name):
-    return f"Hello, {name}!"
-
-print(greet("Alice"))
-
-# 6. Lists and Dictionaries
-# List
-fruits = ["apple", "banana", "cherry"]
-print(fruits[1])  # Output: banana
-
-# Dictionary
-person = {"name": "Alice", "age": 25}
-print(person["name"])  # Output: Alice
-
-# 7. Classes and Objects
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def greet(self):
-        print(f"My name is {self.name} and I am {self.age} years old.")
-
-# Create an object
-alice = Person("Alice", 25)
-alice.greet()
-
-# 8. File Handling
-# Write to a file
-with open("example.txt", "w") as file:
-    file.write("Hello, file!")
-
-# Read from a file
-with open("example.txt", "r") as file:
-    content = file.read()
-    print(content)
-
-# 9. Exception Handling
-try:
-    num = int(input("Enter a number: "))
-    print(10 / num)
-except ValueError:
-    print("That's not a valid number!")
-except ZeroDivisionError:
-    print("Can't divide by zero!")
-
-# 10. Importing Modules
-import math
-print(math.sqrt(16))  # Output: 4.0

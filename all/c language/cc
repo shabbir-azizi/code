@@ -1,0 +1,19 @@
+include <stdio.h>
+
+int main ()
+{
+    printf("hellow pw");
+    printf(\n)
+    printf("hellow lw");
+    return 0;
+    printf("nn\n\nnn\n");
+    printf("nn/n/nnn/n")
+    return 0;
+
+
+
+
+
+}
+
+
