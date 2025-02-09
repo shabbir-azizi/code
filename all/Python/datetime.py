@@ -1,4 +1,3 @@
-
 from tkinter import *
 import datetime  # Importing the datetime module
 
@@ -45,6 +44,8 @@ lab_min.place(x=340, y=50, height=110, width=100)
 lab_min_txt = Label(clock, text="Min.", font=('times new roman', 20, "bold"),
                bg='gray', fg="black")
 lab_min_txt.place(x=340, y=190, height=40, width=100)
+
+
 
 lab_sec = Label(clock, text="00", font=('times new roman', 60, "bold"),
                bg='gray', fg="black")
@@ -96,4 +97,4 @@ lab_day_txt = Label(clock, text="Day", font=('times new roman', 20, "bold"),
 lab_day_txt.place(x=780, y=410, height=40, width=100)
 
 date_time()
-clock.mainlo
+clock.mainloop()
