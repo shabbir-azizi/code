@@ -84,5 +84,4 @@ def task_manager():
 
         else:
             print("Invalid option. Please try again.")
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                         
