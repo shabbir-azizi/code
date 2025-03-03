@@ -41,8 +41,3 @@ lbl_paragraph.Grid(row=0,column=0)
 
 frame_test.grid(row=0,column=0)
 
-
-# Output Frame
-# Keyboard Frame
-main_frame.grid() 
-window.mainloop()

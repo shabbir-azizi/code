@@ -30,3 +30,8 @@ a = int(input("enter second :"))
 b = int(input("enter second :"))
 
 print(a>=b)
+
+
+
+
+

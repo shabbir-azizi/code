@@ -30,3 +30,10 @@ print(a * a * c * d + h)
 # Corrected variable assignment for `a`
 z = 10  # Example value for z
 a = z
+
+
+
+
+
+
+
