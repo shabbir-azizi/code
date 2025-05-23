@@ -88,3 +88,19 @@ lab_mo.place(x=340, y=270, height=110, width=100)
 
 lab_mo_txt = Label(clock, text="Month.", font=('times new roman', 20, "bold"),
                bg='gray', fg="black")
+
+
+def time():
+    string = strftime('%Y-%m-%d %H:%M:%S %p')
+    label.config(text=string)
+    label.after(1000, time)
+
+root = tk.Tk()
+root.title("Digital Clock")
+
+label = tk.Label(root, font=('calibri', 40, 'bold'), background='black', foreground='white')
+label.pack(anchor='center')
+
+time()
+
+root.mainloop()
