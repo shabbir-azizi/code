@@ -1,0 +1,14 @@
+def time():
+    string = strftime('%Y-%m-%d %H:%M:%S %p')
+    label.config(text=string)
+    label.after(1000, time)
+
+root = tk.Tk()
+root.title("Digital Clock")
+
+label = tk.Label(root, font=('calibri', 40, 'bold'), background='black', foreground='white')
+label.pack(anchor='center')
+
+time()
+
+root.mainloop()
